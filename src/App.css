@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.my-modal-backdrop{
+  position: fixed;
+  background-color: rgb(136,136,136, 0.4);
+  z-index: 1;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.my-modal{
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  padding: 25px;
+  border-radius: 5px;
+  left:50%;
+  top: 50%;
+  color: #303030;
+  transform: translate(-50%, -50%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-label{
+  display: block;
+  width:70%;
+  margin: 10px auto;
+  color:#303030;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type='text'].normal, input[type='number'].normal{
+  display: block;
+  width: 70%;
+  padding:10px;
+  border-radius:5px;
+  color:#303030;
+  font-size:15px;
+  border:1.5px solid gray;
+  margin: 10px auto;
+  box-sizing: border-box;
 }
-
-.App-link {
-  color: #61dafb;
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pop-over{
+  position: absolute;
+  border-radius: 5px;
+  padding :15px;
+  z-index: 1;
+  top:100px;
+  right:20px;
+  color: #303030;
+  width:200px;
+  background-color: white;
+  border: 1px solid lightgray;
 }
