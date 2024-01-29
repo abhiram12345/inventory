@@ -2,6 +2,7 @@ import { useMutation } from "react-query";
 import { deleteAllItems } from "../queries/mutations";
 import { useNavigate } from "react-router-dom";
 import HeaderBar from "../components/HeaderBar";
+import { toast } from "react-toastify";
 
 export default function ManageItems(){
     const navigate = useNavigate();
@@ -9,6 +10,11 @@ export default function ManageItems(){
         mutationFn:deleteAllItems,
         onSuccess: ()=>{
             navigate('/');
+            toast('All items deleted successfully', {
+                position:'bottom-right',
+                autoClose:'4000',
+                type:'success'
+            })
         }
     })
     return(<>

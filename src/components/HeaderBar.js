@@ -41,7 +41,7 @@ export default function HeaderBar(){
         </button>
         </div>
         {isMobileScreen && <div>
-            <button style={{
+            <button className="me-3" style={{
                 border:'none',
                 backgroundColor:'transparent'
             }} onClick={()=>{

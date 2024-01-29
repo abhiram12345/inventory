@@ -4,6 +4,7 @@ import {useMutation} from 'react-query';
 import { addItem } from "../queries/mutations";
 import { useNavigate } from "react-router-dom";
 import HeaderBar from "../components/HeaderBar";
+import { toast } from "react-toastify";
 
 export default function AddItem(){
     const navigate = useNavigate();
@@ -14,6 +15,11 @@ export default function AddItem(){
         mutationFn:addItem,
         onSuccess: ()=>{
             navigate('/');
+            toast('Item added successfully', {
+                position:'bottom-right',
+                autoClose:'4000',
+                type:'success'
+            });
         }
     });
     return(<>

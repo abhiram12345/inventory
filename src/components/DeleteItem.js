@@ -1,6 +1,7 @@
 import { useMutation } from "react-query"
 import { deleteItem } from "../queries/mutations";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function DeleteItem({itemId, setIsOpen}){
     const navigate = useNavigate();
@@ -8,6 +9,11 @@ export default function DeleteItem({itemId, setIsOpen}){
         mutationFn: deleteItem,
         onSuccess: ()=>{
             navigate('/');
+            toast('Item deleted successfully', {
+                position:'bottom-right',
+                autoClose:'4000',
+                type:'success'
+            });
         }
     });
     return(<div>
