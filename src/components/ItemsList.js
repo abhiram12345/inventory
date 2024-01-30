@@ -35,7 +35,7 @@ export default function ItemsList(){
     {
         status === 'loading' ? 'loading' : data.pages.map((group, index)=><>{
             group.length === 0 && index === 0  ? <NoItems/> :
-            group.map((item)=> <ItemCard itemName={item.itemName} price={item.price} stock={item.stock} itemId={item.id}/>)
+            group.map((item)=> <ItemCard itemName={item.itemName} price={item.price} stock={item.stock} itemId={item.id} key={item.id}/>)
         }</>)
     }
     {hasNextPage && <div ref={ref} className="p-3"></div>}

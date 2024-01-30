@@ -47,7 +47,7 @@ export default function HeaderBar(){
             }} onClick={()=>{
                 setDropDown(state=> !state);
             }}><span className="material-symbols-rounded">{isDropDown ? 'close' : 'more_vert'}</span></button>
-            <span class="material-symbols-rounded">deployed_code</span>
+            <span className="material-symbols-rounded">deployed_code</span>
         </div>}
         {isDropDown && <DropDown/>}
     </header>

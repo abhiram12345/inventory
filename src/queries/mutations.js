@@ -7,7 +7,7 @@ const addItem = async (data) =>{
 const editStock = async ({mode, itemId, stockValue})=>{
     const tx = db.transaction('items', 'readwrite');
     const item = await tx.store.get(parseInt(itemId));
-    let currentStock = item.stock;
+    let currentStock = parseInt(item.stock);
     if(mode === 'add') {
         currentStock += parseInt(stockValue);
     }else {
